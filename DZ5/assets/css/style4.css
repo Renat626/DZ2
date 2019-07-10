@@ -99,6 +99,9 @@ header {
   display: flex;
   align-items: center;
 }
+.container__basket_link a {
+  padding-bottom: 20px;
+}
 .container__basket img {
   margin-right: 26px;
 }
@@ -483,6 +486,18 @@ hr {
   text-transform: uppercase;
 }
 
+.text__arrivals a {
+  color: #636363;
+  font-family: Lato;
+  font-weight: 300;
+  text-transform: uppercase;
+  transition: color .3s linear;
+}
+
+.text__arrivals a:hover {
+  color: #000;
+}
+
 .text__arrivals p {
   color: #636363;
   font-family: Lato;
@@ -529,6 +544,11 @@ hr {
   color: #c0c0c0;
   font-size: 16px;
   line-height: 30px;
+  transition: color .3s linear;
+}
+
+.product i:hover {
+  color: #000;
 }
 
 .product span {
@@ -605,11 +625,12 @@ hr {
 .product__buy_price input {
   width: 54px;
   height: 30px;
-  text-align: center;
+  padding-left: 22px;
   color: #656565;
   font-family: Lato;
   font-size: 13px;
   font-weight: 400;
+  box-sizing: border-box;
 }
 .product__link {
   display: -webkit-flex;

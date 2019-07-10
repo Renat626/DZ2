@@ -337,6 +337,10 @@ header {
 	align-items: center;
 }
 
+.container__basket_link a {
+	padding-bottom: 20px;
+}
+
 .container__basket img {
 	margin-right: 26px;
 }
@@ -492,6 +496,18 @@ hr {
 	font-size: 24px;
 	font-weight: 900;
 	text-transform: uppercase;
+}
+
+.text__arrivals a {
+	color: #636363;
+	font-family: Lato;
+	font-weight: 300;
+	text-transform: uppercase;
+	transition: color .3s linear;
+}
+
+.text__arrivals a:hover {
+	color: #000;
 }
 
 .text__arrivals p {
@@ -767,6 +783,11 @@ hr {
 	width: 263px;
 	height: 364px;
 	position: relative;
+	transition: transform .3s linear;
+}
+
+.block:hover {
+	transform: scale(1.05);
 }
 
 #shadow:hover {

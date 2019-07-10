@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="../css/style4.css">
+	<link rel="stylesheet" href="../css/style5.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/4b1da41dd8.js"></script>
@@ -54,7 +54,7 @@
 
 			<div class="container__basket">
 				<div class="container__basket_link">
-					<a href="../html/ShoppingCart.html"><img src="../img/Forma_1.svg" alt=""></a>
+					<a href="ShoppingCart.html"><img src="../img/Forma_1.svg" alt=""></a>
 					<div class="container__basket_drop">
 						<div class="container__basket_drop_block">
 							<img src="../img/Layer_43 (2).png" alt="">
@@ -84,7 +84,7 @@
 
 						<div class="container__basket_drop_link">
 							<a href="#">Checkout</a><br>
-							<a href="#">Go to cart</a>
+							<a href="ShoppingCart.html">Go to cart</a>
 						</div>
 					</div>
 				</div>
@@ -166,117 +166,56 @@
 		</div>
 	</div>
 
-	<div class="product">
-		<div class="product__headline">
-			<div class="product__headline_part1">
-				<h1>Product details</h1>
+	<div class="shipping">
+		<h1>01. Shipping Adress</h1>
+		<div class="shipping__block">
+			<div class="shipping__block__content1">
+				<h2>Check as a guest or register</h2>
+				<p>Register with us for future convenience</p>
+				<form action="#">
+					<input type="radio" name="choice" id="choice1">
+					<label for="choice1">checkout as guest</label><br>
+					<input type="radio" name="choice" id="choice2" style="margin-top: 16px; margin-bottom: 32px;">
+					<label for="choice2">register</label>
+				</form>
+				<h2>register and save time!</h2>
+				<p>Register with us for future convenience</p>
+				<div class="shipping__block__content1__text">
+					<p style="margin-bottom: 15px!important;"><i class="fas fa-angle-double-right"></i> Fast and easy checkout</p>
+					<p><i class="fas fa-angle-double-right"></i> Easy access to your order history and status</p>
+				</div>
+				<a href="#">Continue</a>
 			</div>
 
-			<div class="product__headline_part2">
-				<h1>Unite price</h1>
-				<h1>Quantity</h1>
-				<h1>Shipping</h1>
-				<h1>Subtotal</h1>
-				<h1>Action</h1>
+			<div class="shipping__block__content2">
+				<h2>Already registed?</h2>
+				<p>Please log in below</p>
+				<form action="#">
+					<h3>EMAIL ADDRESS<span>*</span></h3>
+					<input type="email" required>
+					<h3>PASSWORD<span>*</span></h3>
+					<input type="password" required>
+					<h4>* Required Fileds</h4>
+					<input type="submit" value="LOG IN">
+					<a href="#">Forgot Password?</a>
+				</form>
+				
 			</div>
 		</div>
+	</div>
 
+	<div class="shipping2">
 		<hr>
-
-			<div class="product__buy">
-				<div class="product__buy_headline_main">
-					<img src="../img/Layer_43 (1).png" alt="">
-					<div class="product__buy_headline">
-						<h1>Mango people t-shirt</h1>
-						<h2>Color:<span>Red</span></h2>
-						<h2>Size:<span>Xll</span></h2>
-					</div>
-				</div>
-
-				<div class="product__buy_price">
-					<h3>$150</h3>
-					<input type="text" value="2">
-					<h3>FREE</h3>
-					<h3>$300</h3>
-					<i class="fas fa-times-circle"></i>
-				</div>
-			</div>
-
-			<hr>
-		
-			<div class="product__buy">
-				<div class="product__buy_headline_main">
-					<img src="../img/Layer_44 (2).png" alt="">
-					<div class="product__buy_headline">
-						<h1>Mango people t-shirt</h1>
-						<h2>Color:<span>Red</span></h2>
-						<h2>Size:<span>Xll</span></h2>
-					</div>
-				</div>
-
-				<div class="product__buy_price">
-					<h3>$150</h3>
-					<input type="text" value="2">
-					<h3>FREE</h3>
-					<h3>$300</h3>
-					<i class="fas fa-times-circle"></i>
-				</div>
-			</div>
-
-			<hr>
-		
-			<div class="product__buy">
-				<div class="product__buy_headline_main">
-					<img src="../img/Layer_45 (2).png" alt="">
-					<div class="product__buy_headline">
-						<h1>Mango people t-shirt</h1>
-						<h2>Color:<span>Red</span></h2>
-						<h2>Size:<span>Xll</span></h2>
-					</div>
-				</div>
-
-				<div class="product__buy_price">
-					<h3>$150</h3>
-					<input type="text" value="2">
-					<h3>FREE</h3>
-					<h3>$300</h3>
-					<i class="fas fa-times-circle"></i>
-				</div>
-			</div>
-
-			<hr>
-
-			<div class="product__link">
-				<a href="#">CLEAR SHOPPING CART</a>
-				<a href="#">CONTINUE SHOPPING</a>
-			</div>
-
-			<div class="product__checkIn">
-				<div class="product__checkIn_block">
-					<h1>Shipping Adress</h1>
-					<details>
-						<summary>Bangladesh</summary>
-					</details>
-					<input type="text" placeholder="State"><br>
-					<input type="text" placeholder="Postcode/Zip"><br>
-					<a href="#">Get a quote</a>
-				</div>
-
-				<div class="product__checkIn_block">
-					<h1>coupon  discount</h1>
-					<p>Enter your coupon code if you have one</p>
-					<input type="text" placeholder="State"><br>
-					<a href="#">Apply coupon</a>
-				</div>
-
-				<div class="product__checkIn_block2">
-					<h4>Sub total<span>$900</span></h4>
-					<h1>Grand total<span>$900</span></h1>
-					<div class="product__checkIn_block2_link">
-						<a href="#">proceed to checkout</a>
-					</div>
-				</div>
-			</div>
+		<h1>02. BILLING INFORMATION</h1>
+		<hr>
+		<h1>03. SHIPPING INFORMATION</h1>
+		<hr>
+		<h1>04. SHIPPING METHOD</h1>
+		<hr>
+		<h1>05. PAYMENT METHOD</h1>
+		<hr>
+		<h1>06. ORDER REVIEW</h1>
+		<hr>
 	</div>
 
 	<div class="slider">
