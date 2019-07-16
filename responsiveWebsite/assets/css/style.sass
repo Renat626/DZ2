@@ -5,6 +5,7 @@
 
 body
 	box-sizing: border-box
+	border: 0
 
 a 
 	text-decoration: none
@@ -16,7 +17,6 @@ li
 	background: url("../img/bg1 3.png") no-repeat center
 	background-size: cover
 	width: 100%
-	height: 525px
 	&__container
 		width: 100%
 		max-width: 1160px
@@ -27,8 +27,11 @@ li
 		display: -ms-flex
 		display: -o-flex
 		display: flex 
-		justify-content: space-between 
 		align-items: center
+	&__logo
+		padding-right: 140px
+	&__button
+			display: none
 	&__container2
 		width: 100%
 		max-width: 1160px
@@ -58,13 +61,12 @@ li
 		height: 48px
 		line-height: 48px
 		text-transform: uppercase
+		margin-bottom: 155px
+		font-weight: 700
 	&__container2 a:hover
 		box-shadow: 0px 4px 15px rgba(27, 170, 235, 0.45)
 		border-radius: 30px
-
-.nav 
-	padding-bottom: 15px
-
+	
 .menu 
 	display: -webkit-flex
 	display: -moz-flex
@@ -89,12 +91,14 @@ li
 .container3 
 	background: #F7F7F7
 	width: 100%
-	height: 457px
+	&__mainText
+		display: none
 	&__delivery
 		width: 100%
 		max-width: 1160px
 		margin: 0 auto 
 		padding-top: 62px
+		padding-bottom: 59px
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
@@ -126,18 +130,18 @@ li
 		height: 48px
 		line-height: 48px
 		text-transform: uppercase
+		font-weight: 700
 	&__text a:hover
 		box-shadow: 0px 4px 15px rgba(27, 170, 235, 0.45)
 
 
 .container4
 	width: 100%
-	height: 1110px
 	&__content
 		width: 100%
 		max-width: 1160px
 		margin: 0 auto 
-		padding-top: 69px
+		padding-top: 76px
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
@@ -147,6 +151,9 @@ li
 		flex-wrap: wrap 
 	&__content__block
 		width: 460px
+	&__content__block img
+		width: 460px
+		height: 312px
 	&__content__block h1
 		font-family: Myriad Pro
 		font-size: 30px
@@ -159,15 +166,17 @@ li
 		font-size: 20px
 		line-height: 24px
 		height: 93px
+		padding-bottom: 38px
 
 .container5 
 	width: 100%
-	height: 180px
 	background-color: #F7F7F7
 	&__content
-		width: 1160px
+		width: 100%
+		max-width: 1160px
 		margin: 0 auto
 		padding-top: 64px
+		padding-bottom: 68px
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
@@ -195,12 +204,13 @@ li
 
 .container6 
 	width: 100%
-	height: 240px
 	background-color: #008DCD
 	&__content
-		width: 1160px
+		width: 100%
+		max-width: 1160px
 		margin: 0 auto
 		padding-top: 68px
+		padding-bottom: 43px
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
@@ -246,6 +256,7 @@ li
 		border-radius: 30px
 		margin-bottom: 16px
 		cursor: pointer
+		font-weight: 700
 	&__contact input[type="submit"]:hover
 		box-shadow: 0px 4px 20px rgba(255, 204, 0, 0.55)
 	&__contact label
@@ -256,7 +267,6 @@ li
 
 .container7
 	width: 100%
-	height: 547px
 	&__text 
 		width: 100%
 		max-width: 1160px
@@ -276,6 +286,7 @@ li
 		display: -ms-flex
 		display: -o-flex
 		display: flex
+		padding-bottom: 57px
 	&__slider__block p
 		width: 460px
 	&_margin1
@@ -338,7 +349,6 @@ li
 
 .container8
 	width: 100%
-	height: 496px
 	background-color: #F7F7F7
 	&__text
 		width: 100%
@@ -353,6 +363,7 @@ li
 		width: 100%
 		max-width: 1160px
 		margin: 0 auto
+		padding-bottom: 69px
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
@@ -381,20 +392,20 @@ li
 
 .container9 
 	width: 100%
-	height: 612px
 	&__text
 		width: 100%
 		max-width: 1160px
 		margin: 0 auto
+		padding-top: 80px
+		padding-bottom: 27px
 	&__text h1
 		font-family: Myriad Pro
 		font-size: 36px
-		padding-top: 80px
-		padding-bottom: 27px
 	&__content
 		width: 100%
 		max-width: 1160px
 		margin: 0 auto
+		padding-bottom: 64px
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
@@ -447,11 +458,11 @@ li
 		width: 100%
 		max-width: 1160px
 		margin: 0 auto
+		padding-top: 64px
+		padding-bottom: 24px
 	&__text h1
 		font-family: Myriad Pro
 		font-size: 36px
-		padding-top: 64px
-		padding-bottom: 24px
 	&__content
 		width: 100%
 		max-width: 1160px
@@ -464,7 +475,7 @@ li
 		display: flex
 		justify-content: space-between
 	&__block1
-		width: 558px
+		max-width: 558px
 		height: 64px
 		background: #FFFFFF
 		border-radius: 200px
@@ -500,7 +511,7 @@ li
 		padding-left: 30px
 		width: 472px
 	&__block2
-		width: 558px
+		width: 544px
 		height: 113px
 		background: #F7F7F7
 		position: absolute
@@ -511,7 +522,7 @@ li
 	&__block2 p
 		font-family: Myriad Pro
 		font-size: 16px		
-		width: 493px
+		max-width: 493px
 		padding-top: 20px
 		padding-bottom: 30px
 
@@ -526,12 +537,12 @@ li
 
 .container11
 	width: 100%
-	height: 172px
 	&__content
 		width: 100%
 		max-width: 1160px
 		margin: 0 auto
 		padding-top: 59px
+		padding-bottom: 52px
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
@@ -567,7 +578,6 @@ li
 
 .container12
 	width: 100%
-	height: 266px
 	background-color: #E9E9E9
 	&__content
 		width: 100%
@@ -609,6 +619,7 @@ li
 		height: 48px
 		line-height: 48px
 		text-transform: uppercase
+		font-weight: 700
 	&__content a:hover
 		box-shadow: 0px 4px 15px rgba(27, 170, 235, 0.45)
 	&__content2
@@ -623,8 +634,11 @@ li
 		display: -ms-flex
 		display: -o-flex
 		display: flex
-		justify-content: space-between
 		align-items: center
+	&__content2 li 
+		padding-right: 77px
+	&__content2 li:last-child 
+		padding-right: 0
 	&__content2 a
 		font-family: Myriad Pro
 		font-size: 18px
@@ -632,12 +646,14 @@ li
 	&__content2 img
 		width: 160px
 		height: 48px
+		margin-right: 35px
 	&__content3
 		width: 100%
 		max-width: 1160px
 		margin: 0 auto
 		padding-left: 20px
 		padding-top: 20px
+		padding-bottom: 22px
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
@@ -665,7 +681,7 @@ li
 	display: -o-flex
 	display: flex
 	justify-content: space-between
-	width: 960px
+	max-width: 960px
 
 .p3
 	margin-left: 385px
@@ -674,17 +690,19 @@ li
 .p2
 	margin-left: 68px
 
+.container13
+	display: none
+
 /*Адаптив*/
 
-@media screen and (max-width: 1200px)
-
-	body 
-		width: 100vw
+@media screen and (max-width: 1359px)
 
 	.header
-		height: 415px
+		
 		&__container
 			max-width: 701px
+		&__logo
+			padding-right: 20px
 		&__logo img
 			width: 100px
 			height: 29px
@@ -699,12 +717,588 @@ li
 		&__container2 h2
 			font-size: 28px
 			height: 34px
+		&__container2 a
+			margin-bottom: 60px
+			width: 280px
+			padding-left: 30px
+			box-sizing: border-box
 
-.nav
-	padding-bottom: 5px
+	.container3 
+		
+		&__mainText
+			display: block
+			max-width: 700px
+			margin: 0 auto
+		&__mainText h1
+			font-size: 36px
+			font-family: Myriad Pro
+			padding-top: 25px
+		&__delivery
+			max-width: 700px
+			margin: 0 auto 
+			padding-top: 5px
+			padding-bottom: 51px
+		&__delivery img
+			width: 398px
+			height: 203px
+		&__text
+			width: 280px
+		&__text h1
+			display: none
+		&__text p
+			margin-bottom: 35px
+			font-size: 14px
+		&__text a
+			width: 280px
+			padding-left: 30px
+			box-sizing: border-box
 
-.menu a
-	font-size: 14px
+	.container4
 
-.menu li
-	padding-right: 32px	
+		&__content
+			width: 100%
+			max-width: 643px
+			margin: 0 auto 
+			padding-top: 69px
+		&__content__block
+			width: 281px
+		&__content__block img
+			width: 281px
+			height: 190px
+		&__content__block h1
+			font-family: Myriad Pro
+			font-size: 26px
+			line-height: 36px
+			margin-top: 25px
+			margin-bottom: 16px
+		&__content__block p
+			font-family: Myriad Pro
+			font-size: 16px
+			line-height: 19px
+			height: 76px
+
+	.container5 
+
+		&__content
+			width: 100%
+			max-width: 700px
+			padding-top: 30px
+			padding-bottom: 26px
+			align-items: center
+		&__content h1
+			font-family: Myriad Pro
+			font-size: 28px
+			line-height: 34px
+			max-width: 380px
+		&__content a 
+			width: 280px
+			height: 48px
+
+	.container6 
+
+		&__content
+			width: 100%
+			max-width: 700px
+			margin: 0 auto
+			padding-top: 32px
+			padding-bottom: 14px
+		&__text h1
+			font-size: 28px
+			line-height: 34px 
+			margin-bottom: 11px
+			max-width: 392px
+		&__text h2
+			font-size: 14px
+			line-height: 13px
+			max-width: 296px
+		&__contact input[type="tel"]
+			width: 280px
+			height: 48px
+			padding-left: 17px
+			padding-right: 17px
+		&__contact input[type="submit"]
+			width: 280px
+			height: 48px
+			margin-bottom: 16px
+			padding-left: 30px
+			box-sizing: border-box
+		&__contact input[type="submit"]:hover
+			box-shadow: 0px 4px 20px rgba(255, 204, 0, 0.55)
+		&__contact label
+			font-family: Myriad Pro
+			font-size: 10px
+			color: #fff
+			position: absolute
+
+	.container7
+
+		&__text 
+			width: 100%
+			max-width: 700px
+			margin: 0 auto
+			padding-top: 51px
+			padding-bottom: 26px 
+		&__slider
+			width: 100%
+			max-width: 700px
+			margin: 0 auto
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+		&__slider img
+			width: 100px
+			height: 100px
+		&__slider__block p
+			width: 280px
+			font-size: 14px
+		&_margin1
+			margin-left: 41px
+			margin-right: 20px
+		&_margin2
+			margin-right: 43px
+		&__slider__block1
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+		&__padding
+			margin-left: 20px
+			max-width: 158px
+		&__padding h2
+			font-size: 26px
+			margin-bottom: 7px
+		&__padding h3
+			font-size: 18px
+			margin-bottom: 9px
+		&__padding p 
+			font-family: Myriad Pro
+			font-size: 10px
+			margin-bottom: 4px
+
+	.container8
+
+		&__text
+			width: 100%
+			max-width: 700px
+			padding-top: 37px
+		&__content
+			width: 100%
+			max-width: 700px
+			margin: 0 auto
+			padding-bottom: 29px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+		&__block
+			width: 100px
+		&__block p 
+			font-size: 12px
+			padding-top: 16px
+		&__block__img
+			width: 100px
+			height: 100px
+		&__img1
+			width: 56%
+			height: 32%
+		&__img2
+			width: 40%
+			height: 48%
+		&__img3
+			width: 42%
+			height: 42%
+		&__img4
+			width: 43%
+			height: 37%
+		&__img5
+			width: 44%
+			height: 43%
+		&__img6
+			width: 47%
+			height: 36%
+
+	.container9 
+		width: 100%
+		&__text
+			width: 100%
+			max-width: 700px
+			margin: 0 auto
+			padding-top: 47px
+			padding-bottom: 16px
+		&__content
+			width: 100%
+			max-width: 700px
+			padding-bottom: 42px
+		&__block
+			max-width: 220px
+		&__block h2
+			font-size: 20px
+			padding-top: 18px
+		&__block p 
+			font-size: 12px
+			padding-top: 8px
+			height: 90px
+			padding-bottom: 15px
+		&__block a
+			padding-left: 50px
+			width: 220px
+			font-weight: 700
+			box-sizing: border-box
+		&__block__img	
+			width: 100px
+			height: 100px
+		&__img1
+			width: 46%
+			height: 44%
+		&__img2
+			width: 47%
+			height: 52%
+		&__img3
+			width: 49%
+			height: 51%
+
+	.container10 
+
+		&__text
+			width: 100%
+			max-width: 700px
+			padding-top: 41px
+			padding-bottom: 12px
+		&__content
+			width: 100%
+			max-width: 700px
+			padding-bottom: 39px
+			display: block
+		&__block1
+			max-width: 700px
+			margin-bottom: 10px
+		&__block1 p
+			width: 632px
+		&__block2
+			width: 700px
+			height: 113px
+			background: #F7F7F7
+			position: absolute
+			border-bottom-left-radius: 32px
+			border-bottom-right-radius: 32px
+			display: none
+			top: 64px
+		&__block2 p
+			font-family: Myriad Pro
+			font-size: 16px		
+			max-width: 493px
+			padding-top: 20px
+			padding-bottom: 30px
+
+	.container11
+
+		&__content
+			width: 100%
+			max-width: 700px
+			padding-top: 32px
+			padding-bottom: 39px
+		&__content img
+			width: 66px
+			height: 41px
+
+	.container12
+
+		&__content
+			width: 100%
+			max-width: 700px 
+			padding-top: 33px
+		&__content h2
+			font-size: 20px
+			padding-top: 12px
+		&__content input[type="tel"]
+			width: 220px
+			font-size: 14px
+			padding-left: 18px
+			padding-right: 18px
+			margin-bottom: 8px
+		&__content label
+			font-size: 10px
+			color: #9E9E9E
+		&__content2 li 
+			padding-right: 32px
+		&__content2 li:last-child 
+			padding-right: 0
+		&__content a 
+			font-size: 16px
+			width: 220px
+		&__content2
+			width: 100%
+			max-width: 700px
+			margin: 0 auto
+			padding-top: 19px
+			padding-bottom: 30px
+			padding-left: 0
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: flex-start
+		&__content2 a
+			font-size: 14px
+		&__content2 img
+			width: 99px
+			height: 30px
+			margin-right: 20px
+		&__content3
+			width: 100%
+			max-width: 700px
+			padding-left: 0
+			padding-top: 20px
+			justify-content: flex-start
+		&__content3 p
+			font-family: Myriad Pro
+			font-size: 12px
+		&__img
+			margin-left: 120px
+		&__img img
+			padding-right: 16px
+			width: 13px
+			height: 13px
+		&__img img:last-child
+			padding-right: 0
+
+	.arrow1
+		width: 12px
+		height: 12px
+		margin-top: 100px
+
+	.arrow2 
+		width: 12px
+		height: 12px
+		margin-top: 100px
+
+	.arrow4
+		width: 12px
+		height: 12px
+
+	.arrow5
+		width: 12px
+		height: 12px
+
+	.p 
+		margin-top: 14px
+
+	.menu2 
+		
+		max-width: 581px	
+
+	.hr
+		max-width: 700px
+
+	.p3
+		margin-left: 151px
+
+	.p2
+		margin-left: 40px
+
+	.menu
+		max-width: 680px
+
+	.menu li
+		padding-right: 32px
+
+	.menu li:last-child
+		padding-right: 0
+
+	.menu a
+		font-size: 14px
+
+@media screen and (max-width: 826px)
+	
+	.header
+		
+		&__container
+			max-width: 86.875%
+			justify-content: space-between
+			padding-bottom: 221px
+		&__logo
+			padding-right: 0 
+		&__button
+			display: block
+		&__container2
+			display: none
+		&__container2 h1
+			font-size: 44px
+			width: 400px
+			height: 106px
+			margin-bottom: 18px
+		&__container2 h2
+			font-size: 28px
+			height: 34px
+		&__container2 a
+			margin-bottom: 60px
+			width: 280px
+			padding-left: 30px
+			box-sizing: border-box
+
+	.nav 
+		display: none
+
+	.container13
+		display: block
+		width: 100%
+		&__content
+			max-width: 280px
+			margin: 0 auto
+		&__content h1
+			font-size: 32px
+			padding-top: 21px
+			padding-bottom: 8px
+		&__content h2
+			font-size: 24px
+			padding-bottom: 17px
+		&__content a
+			width: 280px
+			height: 48px
+			line-height: 48px
+			padding-left: 30px
+			box-sizing: border-box
+			background-color: #008DCD
+			border-radius: 30px
+			color: #fff
+			display: block
+			text-transform: uppercase
+			text-align: center
+			font-weight: 700
+			margin-bottom: 27px
+		&__content a:hover
+			box-shadow: 0px 4px 15px rgba(27, 170, 235, 0.45)
+
+	.container3 
+		
+		&__mainText
+			display: none
+		&__delivery
+			max-width: 280px
+			margin: 0 auto 
+			padding-top: 17px
+			padding-bottom: 17px
+			flex-direction: column
+		&__delivery img
+			width: 278px
+			height: 141.52px
+			margin-bottom: 25px
+		&__text
+			width: 280px
+			order: 1
+		&__text h1
+			display: block
+			font-size: 18px
+			height: 22px
+		&__text p
+			margin-bottom: 10px
+			font-size: 12px
+		&__text a
+			width: 280px
+			padding-left: 0
+			box-sizing: border-box
+
+	.container4
+
+		&__content
+			width: 100%
+			max-width: 280px
+			margin: 0 auto 
+			padding-top: 27px
+			flex-direction: column
+		&__content__block
+			width: 281px
+		&__content__block img
+			width: 278px
+			height: 188px
+		&__content__block h1
+			font-family: Myriad Pro
+			font-size: 26px
+			line-height: 36px
+			margin-top: 28px
+			margin-bottom: 5px
+		&__content__block p
+			font-family: Myriad Pro
+			font-size: 14px
+			line-height: 19px
+			height: 74px
+			padding-bottom: 0
+
+	.container5 
+
+		&__content
+			width: 100%
+			max-width: 280px
+			padding-top: 23px
+			padding-bottom: 23px
+			align-items: center
+			flex-direction: column
+		&__content h1
+			font-family: Myriad Pro
+			font-size: 24px
+			line-height: 34px
+			max-width: 280px
+		&__content a 
+			width: 280px
+			height: 48px
+			padding-left: 30px
+			box-sizing: border-box
+			font-weight: 700
+
+	.container6 
+
+		&__content
+			width: 100%
+			max-width: 280px
+			margin: 0 auto
+			padding-top: 32px
+			padding-bottom: 7px
+			flex-direction: column
+		&__text h1
+			max-width: 280px
+		&__text h2
+			max-width: 280px
+			padding-bottom: 14px
+		&__contact input[type="submit"]
+			margin-bottom: 9px
+
+	.container7
+
+		&__text 
+			max-width: 280px
+			padding-top: 21px
+			padding-bottom: 7px 
+		&__slider
+			max-width: 280px
+			padding-bottom: 20px
+		&__slider__block p
+			max-width: 253px
+			font-size: 12px
+		&_margin1
+			margin-left: 0
+			margin-right: 0
+		&_margin2
+			display: none
+		&__slider__block1
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+		&__padding
+			margin-left: 20px
+			max-width: 134px
+		&__padding h2
+			font-size: 26px
+			margin-bottom: 0
+		&__padding h3
+			font-size: 18px
+			margin-bottom: 0
+		
+	.p 
