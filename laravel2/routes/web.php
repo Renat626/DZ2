@@ -13,23 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome2', [
-      'data' => 'data',
-      'news' => 'news'
-    ]);
-});
+Route::get('/', [
+  'uses' => 'WelcomeController@welcome'
+]);
 
-Route::get('/data', function () {
-    return view('data', [
-      'welcome' => '/',
-      'news' => 'news'
-    ]);
-});
+Route::get('/news', [
+  'uses' => 'NewsController@showNews'
+]);
 
-Route::get('/news', function () {
-    return view('news', [
-      'welcome' => '/',
-      'data' => 'data'
-    ]);
-});
+Route::get('/news/{id}', [
+  'uses' => 'NewsController@showNewById'
+]);
+
+Route::get('/categories', [
+  'uses' => 'NewsController@showCategories'
+]);
+
+Route::get('/categories/{category}', [
+  'uses' => 'NewsController@showNewByCategory'
+]);
