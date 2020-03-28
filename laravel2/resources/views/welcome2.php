@@ -63,7 +63,7 @@
 
     <div class="welcome">
       <div class="welcome__block">
-        <h1>Hello everybody1</h1>
+        <h1>Hello everybody</h1>
         <div class="welcome__block__menu">
           <ul>
             <li><a href="<?= $data ?>">Data</a></li>
