@@ -29,6 +29,6 @@ Route::get('/categories', [
   'uses' => 'NewsController@showCategories'
 ]);
 
-Route::get('/categories/{category}', [
+Route::get('/categories/{category_id}', [
   'uses' => 'NewsController@showNewByCategory'
 ]);
