@@ -32,3 +32,15 @@ Route::get('/categories', [
 Route::get('/categories/{category_id}', [
   'uses' => 'NewsController@showNewByCategory'
 ]);
+
+Route::post('/add', [
+  'uses' => 'NewsController@addNew'
+])->name('add');
+
+Route::get('/add', function() {
+  return view('addNew');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
