@@ -33,13 +33,18 @@ Route::get('/categories/{category_id}', [
   'uses' => 'NewsController@showNewByCategory'
 ]);
 
+
+Route::get('/add', [
+  'uses' => 'NewsController@locationAddNew'
+]);
+
 Route::post('/add', [
   'uses' => 'NewsController@addNew'
 ])->name('add');
 
-Route::get('/add', function() {
-  return view('addNew');
-});
+// Route::get('/add', function() {
+//   return view('addNew');
+// });
 
 Auth::routes();
 
