@@ -29,7 +29,7 @@
 @section('content')
   @forelse($categories as $value)
     <div class="alert alert-primary" role="alert">
-      <a href="categories/{{ $value['category_id'] }}">{{ $value['category'] }}</a>
+      <a href="categories/{{ $value->id }}">{{ $value->category }}</a>
     </div>
   @empty
     <div class="alert alert-primary" role="alert">

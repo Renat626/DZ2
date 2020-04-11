@@ -29,7 +29,7 @@
 @section('content')
   @forelse($news as $value)
     <div class="alert alert-primary" role="alert">
-      <a href="news/{{ $value['id'] }}">{{ $value['headline'] }}</a>
+      <a href="news/{{ $value->news_id }}">{{ $value->headline }}</a>
     </div>
   @empty
     <div class="alert alert-primary" role="alert">

@@ -1,12 +1,12 @@
 @extends('layouts.main')
 
 @section('title')
-  {{ $headline }}
+  {{ $new->headline }}
 @endsection
 
 @section('menu')
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <h1>{{ $headline }}</h1>
+  <h1>{{ $new->headline }}</h1>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -28,7 +28,7 @@
 
 @section('content')
   <div class="alert alert-primary" role="alert">
-    <h1>{{ $headline }}</h1>
-    <p>{{ $text }}</p>
+    <h1>{{ $new->headline }}</h1>
+    <p>{{ $new->text }}</p>
   </div>
 @endsection

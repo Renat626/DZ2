@@ -1,12 +1,12 @@
 @extends('layouts.main')
 
 @section('title')
-  {{ $categories[$category_id]["category"] }}
+  {{ $categories->category }}
 @endsection
 
 @section('menu')
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <h1>{{ $categories[$category_id]["category"] }}</h1>
+  <h1>{{ $categories->category }}</h1>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -28,10 +28,10 @@
 
 @section('content')
   @foreach($news as $value)
-    @if ($value['category'] == $category_id)
+    @if ($value->category == $category_id)
       <div class="alert alert-primary" role="alert">
-        <h1>{{ $value['headline'] }}</h1>
-        <p>{{ $value['text'] }}</p>
+        <h1>{{ $value->headline }}</h1>
+        <p>{{ $value->text }}</p>
       </div>
     @endif
   @endforeach
