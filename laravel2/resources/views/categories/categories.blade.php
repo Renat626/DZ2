@@ -1,9 +1,5 @@
 @extends('layouts.main')
 
-@section('title')
-  Categories
-@endsection
-
 @section('menu')
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <h1>Categories</h1>

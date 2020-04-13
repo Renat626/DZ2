@@ -2,7 +2,7 @@
 
 @section('menu')
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <h1>Add news</h1>
+  <h1>Update news</h1>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -23,7 +23,7 @@
 @endsection
 
 @section('content')
-  <form action="{{ route('add') }}" method="post">
+  <form action="{{ route('update') }}" method="post">
     @csrf
     <div class="form-group">
       <label for="exampleInputEmail1">Headline</label>
@@ -38,6 +38,14 @@
       <select class="form-control" name="category" id="category">
         @foreach($categories as $value)
           <option value="{{ $value->id }}">{{ $value->category }}</option>
+        @endforeach
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="news">news</label>
+      <select class="form-control" name="news" id="news">
+        @foreach($news as $value)
+          <option value="{{ $value->news_id }}">{{ $value->headline }}</option>
         @endforeach
       </select>
     </div>

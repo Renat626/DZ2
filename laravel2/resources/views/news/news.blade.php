@@ -1,9 +1,5 @@
 @extends('layouts.main')
 
-@section('title')
-  News
-@endsection
-
 @section('menu')
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <h1>News</h1>
@@ -36,4 +32,5 @@
       <p>Новостей нет</p>
     </div>
   @endforelse
+  {{ $news->links() }}
 @endsection

@@ -42,9 +42,21 @@ Route::post('/add', [
   'uses' => 'NewsController@addNew'
 ])->name('add');
 
-// Route::get('/add', function() {
-//   return view('addNew');
-// });
+Route::get('/update', [
+  'uses' => 'NewsController@locationUpdateNew'
+]);
+
+Route::post('/update', [
+  'uses' => 'NewsController@updateNew'
+])->name('update');
+
+Route::get('/delete', [
+  'uses' => 'NewsController@locationDeleteNew'
+]);
+
+Route::post('/delete', [
+  'uses' => 'NewsController@deleteNew'
+])->name('delete');
 
 Auth::routes();
 

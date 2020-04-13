@@ -1,12 +1,7 @@
 @extends('layouts.main')
 
-@section('title')
-  {{ $new->headline }}
-@endsection
-
 @section('menu')
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <h1>{{ $new->headline }}</h1>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -27,8 +22,10 @@
 @endsection
 
 @section('content')
+  @foreach($new as $item)
   <div class="alert alert-primary" role="alert">
-    <h1>{{ $new->headline }}</h1>
-    <p>{{ $new->text }}</p>
+    <h1>{{ $item['headline'] }}</h1>
+    <p>{{ $item['text'] }}</p>
   </div>
+  @endforeach
 @endsection
