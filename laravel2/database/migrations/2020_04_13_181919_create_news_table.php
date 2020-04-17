@@ -18,7 +18,6 @@ class CreateNewsTable extends Migration
             $table->string('headline');
             $table->string('text');
             $table->bigInteger('category');
-            $table->timestamps();
         });
     }
 

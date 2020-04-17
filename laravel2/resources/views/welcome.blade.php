@@ -12,23 +12,24 @@
         <a class="nav-link" href="/">Main</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="news">News</a>
+        <a class="nav-link" href="/news">News</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="categories">Categories</a>
+        <a class="nav-link" href="/categories">Categories</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="home">Registration</a>
+        <a class="nav-link" href="/home">Registration</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="add">Add</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="update">Update</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="delete">Delete</a>
-      </li>
+      @if (is_object(Auth::user()))
+        @if (Auth::user()->name == 'admin')
+          <li class="nav-item">
+            <a class="nav-link" href="/addLocation">Add</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/updateLocation">Update</a>
+          </li>
+          @endif
+      @endif
     </ul>
   </div>
 </nav>

@@ -34,7 +34,7 @@ Route::get('/categories/{category_id}', [
 ]);
 
 
-Route::get('/add', [
+Route::get('/addLocation', [
   'uses' => 'NewsController@locationAddNew'
 ]);
 
@@ -42,7 +42,7 @@ Route::post('/add', [
   'uses' => 'NewsController@addNew'
 ])->name('add');
 
-Route::get('/update', [
+Route::get('/updateLocation', [
   'uses' => 'NewsController@locationUpdateNew'
 ]);
 
@@ -50,13 +50,9 @@ Route::post('/update', [
   'uses' => 'NewsController@updateNew'
 ])->name('update');
 
-Route::get('/delete', [
-  'uses' => 'NewsController@locationDeleteNew'
-]);
-
-Route::post('/delete', [
+Route::get('/delete/{id}', [
   'uses' => 'NewsController@deleteNew'
-])->name('delete');
+]);
 
 Auth::routes();
 
