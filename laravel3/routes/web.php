@@ -33,7 +33,6 @@ Route::get('/categories/{category_id}', [
   'uses' => 'NewsController@showNewByCategory'
 ]);
 
-
 Route::get('/addLocation', [
   'uses' => 'NewsController@locationAddNew'
 ]);
