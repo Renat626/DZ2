@@ -9,13 +9,13 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="news">News</a>
+        <a class="nav-link" href="/">main</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/">Main</a>
+        <a class="nav-link" href="addLocation">Add</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="categories">Categories</a>
+        <a class="nav-link" href="updateLocation">Update</a>
       </li>
     </ul>
   </div>
@@ -25,7 +25,7 @@
 @section('content')
   @forelse($news as $value)
     <div class="alert alert-primary" role="alert">
-        <a href="news/{{ $value->news_id }}">{{ $value->headline }}</a>
+        <a href="newsAdmin/{{ $value->news_id }}">{{ $value->headline }}</a>
     </div>
   @empty
     <div class="alert alert-primary" role="alert">

@@ -13,11 +13,16 @@ class News extends Model
   protected $category = 'category';
 
   public static function rules() {
-    $tableNameCategory =  (new Categories())->getTable();
     return [
       'headline' => 'required|max:255',
-      'text' => 'required',
-      'category' => "required|exists:{$tableNameCategory},id"
+      'text' => 'required'
+    ];
+  }
+
+  public static function attributeNews() {
+    return [
+      'headline' => 'Название новости',
+      'text' => 'Текст'
     ];
   }
 }

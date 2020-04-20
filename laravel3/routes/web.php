@@ -17,41 +17,73 @@ Route::get('/', [
   'uses' => 'WelcomeController@welcome'
 ]);
 
-Route::get('/news', [
-  'uses' => 'NewsController@showNews'
-]);
+Route::group([
+    'prefix' => 'admin',
+], function () {
+  Route::get('/', [
+    'uses' => 'NewsController@admin'
+  ]);
 
-Route::get('/news/{id}', [
-  'uses' => 'NewsController@showNewById'
-]);
+  Route::get('/addLocation', [
+    'uses' => 'NewsController@locationAddNew'
+  ]);
 
-Route::get('/categories', [
-  'uses' => 'NewsController@showCategories'
-]);
+  Route::post('/add', [
+    'uses' => 'NewsController@addNew'
+  ])->name('add');
 
-Route::get('/categories/{category_id}', [
-  'uses' => 'NewsController@showNewByCategory'
-]);
+  Route::get('/updateLocation', [
+    'uses' => 'NewsController@locationUpdateNew'
+  ]);
 
-Route::get('/addLocation', [
-  'uses' => 'NewsController@locationAddNew'
-]);
+  Route::post('/update', [
+    'uses' => 'NewsController@updateNew'
+  ])->name('update');
 
-Route::post('/add', [
-  'uses' => 'NewsController@addNew'
-])->name('add');
+  Route::get('/newsAdmin', [
+    'uses' => 'NewsController@showNewsAdmin'
+  ]);
 
-Route::get('/updateLocation', [
-  'uses' => 'NewsController@locationUpdateNew'
-]);
+  Route::get('/newsAdmin/{id}', [
+    'uses' => 'NewsController@showNewAdminById'
+  ]);
 
-Route::post('/update', [
-  'uses' => 'NewsController@updateNew'
-])->name('update');
+  Route::get('newsAdmin/delete/{news}', [
+    'uses' => 'NewsController@deleteNew'
+  ]);
 
-Route::get('/delete/{id}', [
-  'uses' => 'NewsController@deleteNew'
-]);
+  Route::get('/updateUserLocation', [
+    'uses' => 'ProfileController@locationUpdateUser'
+  ]);
+
+  Route::post('/updateUser', [
+    'uses' => 'ProfileController@updateUser'
+  ])->name('updateUser');
+});
+
+Route::group([
+    'prefix' => 'news'
+], function () {
+  Route::get('/', [
+    'uses' => 'NewsController@showNews'
+  ]);
+
+  Route::get('/{id}', [
+    'uses' => 'NewsController@showNewById'
+  ]);
+});
+
+Route::group([
+    'prefix' => 'categories'
+], function () {
+  Route::get('/', [
+    'uses' => 'NewsController@showCategories'
+  ]);
+
+  Route::get('/{category_id}', [
+    'uses' => 'NewsController@showNewByCategory'
+  ]);
+});
 
 Auth::routes();
 

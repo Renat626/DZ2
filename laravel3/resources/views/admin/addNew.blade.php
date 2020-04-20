@@ -11,12 +11,6 @@
       <li class="nav-item active">
         <a class="nav-link" href="/">Main</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="news">News</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="categories">Categories</a>
-      </li>
     </ul>
   </div>
 </nav>
@@ -45,7 +39,7 @@
     @endif
     <div class="form-group">
       <label for="exampleInputPassword1">Text</label>
-      <input type="text" class="form-control" id="exampleInputPassword1" name="text"  value="{{ $news->text ?? old('text') }}">
+      <input type="text" class="form-control" id="exampleInputPassword1" name="text" value="{{ $news->text ?? old('text') }}">
     </div>
     <div class="form-group">
       <label for="category">category</label>
@@ -55,6 +49,6 @@
         @endforeach
       </select>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" name="button">Submit</button>
   </form>
 @endsection

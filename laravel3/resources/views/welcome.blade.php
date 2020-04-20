@@ -21,12 +21,9 @@
         <a class="nav-link" href="/home">Registration</a>
       </li>
       @if (is_object(Auth::user()))
-        @if (Auth::user()->name == 'admin')
+        @if (Auth::user()->isAdmin == 1)
           <li class="nav-item">
-            <a class="nav-link" href="/addLocation">Add</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/updateLocation">Update</a>
+            <a class="nav-link" href="/admin">Admin</a>
           </li>
           @endif
       @endif

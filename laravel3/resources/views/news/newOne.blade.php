@@ -26,11 +26,6 @@
   <div class="alert alert-primary" role="alert">
     <h1>{{ $item['headline'] }}</h1>
     <p>{{ $item['text'] }}</p>
-    @if (is_object(Auth::user()))
-      @if (Auth::user()->name == 'admin')
-        <a href="/delete/{{ $item['news_id'] }}">Удалить</a>
-        @endif
-    @endif
   </div>
   @endforeach
 @endsection

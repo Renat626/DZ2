@@ -2,20 +2,22 @@
 
 @section('menu')
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <h1>News</h1>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="news">News</a>
+        <a class="nav-link" href="/">main</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/">Main</a>
+        <a class="nav-link" href="/admin/newsAdmin">News</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="categories">Categories</a>
+        <a class="nav-link" href="/admin/addLocation">Add</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/admin/updateLocation">Update</a>
       </li>
     </ul>
   </div>
@@ -23,14 +25,11 @@
 @endsection
 
 @section('content')
-  @forelse($news as $value)
-    <div class="alert alert-primary" role="alert">
-        <a href="news/{{ $value->news_id }}">{{ $value->headline }}</a>
-    </div>
-  @empty
-    <div class="alert alert-primary" role="alert">
-      <p>Новостей нет</p>
-    </div>
-  @endforelse
-  {{ $news->links() }}
+  @foreach($new as $item)
+  <div class="alert alert-primary" role="alert">
+    <h1>{{ $item['headline'] }}</h1>
+    <p>{{ $item['text'] }}</p>
+        <a href="delete/{{ $item['news_id'] }}">Удалить</a>
+  </div>
+  @endforeach
 @endsection
