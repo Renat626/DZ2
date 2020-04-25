@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [
   'uses' => 'WelcomeController@welcome'
-]);
+])->name('welcome');
 
 Route::group([
     'prefix' => 'admin',
@@ -59,6 +59,10 @@ Route::group([
   Route::post('/updateUser', [
     'uses' => 'ProfileController@updateUser'
   ])->name('updateUser');
+
+  Route::get('/parser', [
+    'uses' => 'ParserController@index'
+  ]);
 });
 
 Route::group([
@@ -82,6 +86,30 @@ Route::group([
 
   Route::get('/{category_id}', [
     'uses' => 'NewsController@showNewByCategory'
+  ]);
+});
+
+Route::group([
+    'prefix' => 'profile'
+], function () {
+  Route::get('/', [
+    'uses' => 'ProfileController@locationProfile'
+  ]);
+
+  Route::post('/updateProfile', [
+    'uses' => 'ProfileController@updateProfile'
+  ])->name('updateProfile');
+});
+
+Route::group([
+    'prefix' => 'VK'
+], function () {
+  Route::get('/', [
+    'uses' => 'LoginController@loginVK'
+  ]);
+
+  Route::get('/response', [
+    'uses' => 'LoginController@responseVK'
   ]);
 });
 

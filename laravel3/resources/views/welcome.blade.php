@@ -18,15 +18,20 @@
         <a class="nav-link" href="/categories">Categories</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/home">Registration</a>
+        <a class="nav-link" href="/register">Registration</a>
       </li>
-      @if (is_object(Auth::user()))
-        @if (Auth::user()->isAdmin == 1)
-          <li class="nav-item">
-            <a class="nav-link" href="/admin">Admin</a>
-          </li>
-          @endif
-      @endif
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/admin">Admin</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/profile">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/VK">VK</a>
+      </li>
     </ul>
   </div>
 </nav>

@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\News;
 use App\Categories;
+use App\User;
 use Illuminate\Support\ViewErrorBag;
+use Auth;
 
 class NewsController extends Controller
 {
@@ -23,13 +25,19 @@ class NewsController extends Controller
   }
 
   public function showNewByCategory($category_id) {
-    return view('/categories.categoryOne', ['categories' => Categories::all(),
-    'news' => News::all(),
-    'category_id' => $category_id]);
+    return view('/categories.categoryOne', ['news' => News::find($category_id)]);
   }
 
   public function admin() {
-    return view('/admin.admin');
+    if (is_object(Auth::user())) {
+      if (Auth::user()->isAdmin == 1) {
+        return view('/admin.admin');
+      } else {
+        return view('/auth.login');
+      }
+    } else {
+      return view('/auth.register');
+    }
   }
 
   public function locationAddNew() {
@@ -41,7 +49,7 @@ class NewsController extends Controller
     $this->validate($req, News::rules(), [], News::attributeNews());
     $news->headline = $req->input('headline');
     $news->text = $req->input('text');
-    $news->category = intval($req->input('category'));
+    $news->category_id = intval($req->input('category'));
     $news->save();
 
     return view('/admin.addNew', ['categories' => Categories::all()]);
@@ -57,7 +65,7 @@ class NewsController extends Controller
     $this->validate($req, News::rules(), [], News::attributeNews());
     $new->headline = $req->input('headline');
     $new->text = $req->input('text');
-    $new->category = intval($req->input('category'));
+    $new->category_id = intval($req->input('category'));
     $new->save();
 
     return view('/admin.updateNew', ['categories' => Categories::all(),

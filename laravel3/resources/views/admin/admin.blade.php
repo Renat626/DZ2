@@ -21,7 +21,10 @@
         <a class="nav-link" href="admin/newsAdmin">News</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="admin/updateUserLocation">change data of profile</a>
+        <a class="nav-link" href="admin/updateUserLocation">Change data of profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="admin/parser">Parser</a>
       </li>
     </ul>
   </div>

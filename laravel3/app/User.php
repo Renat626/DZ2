@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'id_in_soc', 'type_auth', 'avatar'
     ];
 
     /**
@@ -38,4 +38,20 @@ class User extends Authenticatable
     ];
 
     protected $isAdmin = 'isAdmin';
+
+    protected $name = 'name';
+    protected $email = 'email';
+
+    public static function rules() {
+      return [
+        'name' => 'required|max:255',
+        'email' => 'required'
+      ];
+    }
+
+    public static function attributeProfile() {
+      return [
+        'name' => 'Имя пользвателя'
+      ];
+    }
 }

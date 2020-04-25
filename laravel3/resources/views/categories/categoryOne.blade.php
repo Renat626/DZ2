@@ -23,11 +23,9 @@
 
 @section('content')
   @foreach($news as $value)
-    @if ($value['category'] == $category_id)
-      <div class="alert alert-primary" role="alert">
-        <h1>{{ $value['headline'] }}</h1>
-        <p>{{ $value['text'] }}</p>
-      </div>
-    @endif
+    <div class="alert alert-primary" role="alert">
+      <h1>{{ $value->headline }}</h1>
+      <p>{{ $value->text }}</p>
+    </div>
   @endforeach
 @endsection

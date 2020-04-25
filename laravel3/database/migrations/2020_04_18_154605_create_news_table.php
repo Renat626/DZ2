@@ -16,8 +16,8 @@ class CreateNewsTable extends Migration
       Schema::create('news', function (Blueprint $table) {
           $table->bigIncrements('news_id');
           $table->string('headline');
-          $table->string('text');
-          $table->bigInteger('category');
+          $table->string('text', 500);
+          $table->bigInteger('category_id')->references('categories(id)')->on('category_id');
       });
     }
 
