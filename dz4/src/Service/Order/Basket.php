@@ -18,6 +18,8 @@ use Service\Discount\NullObject;
 use Service\User\SecurityInterface;
 use Service\User\Security;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Service\Builder\BasketBuilder;
+use Service\checkoutProcess\CheckoutProcess;
 
 class Basket
 {
@@ -93,50 +95,13 @@ class Basket
      */
     public function checkout(): void
     {
-        // Здесь должна быть некоторая логика выбора способа платежа
-        $billing = new Card();
+        $basketBilder = new BasketBuilder();
+        $billing = $basketBilder->setBilling(new Card());
+        $discount = $basketBilder->setDiscount(new NullObject());
+        $communication = $basketBilder->setCommunication(new Email());
+        $security = $basketBilder->setSecurity(new Security($this->session));
 
-        // Здесь должна быть некоторая логика получения информации о скидке
-        // пользователя
-        $discount = new NullObject();
-
-        // Здесь должна быть некоторая логика получения способа уведомления
-        // пользователя о покупке
-        $communication = new Email();
-
-        $security = new Security($this->session);
-
-        $this->checkoutProcess($discount, $billing, $security, $communication);
-    }
-
-    /**
-     * Проведение всех этапов заказа
-     * @param DiscountInterface $discount
-     * @param BillingInterface $billing
-     * @param SecurityInterface $security
-     * @param CommunicationInterface $communication
-     * @return void
-     * @throws BillingException
-     * @throws CommunicationException
-     */
-    public function checkoutProcess(
-        DiscountInterface $discount,
-        BillingInterface $billing,
-        SecurityInterface $security,
-        CommunicationInterface $communication
-    ): void {
-        $totalPrice = 0;
-        foreach ($this->getProductsInfo() as $product) {
-            $totalPrice += $product->getPrice();
-        }
-
-        $discount = $discount->getDiscount();
-        $totalPrice = $totalPrice - $totalPrice / 100 * $discount;
-
-        $billing->pay($totalPrice);
-
-        $user = $security->getUser();
-        $communication->process($user, 'checkout_template');
+        $checkoutProcess = new CheckoutProcess($discount, $billing, $security, $communication);
     }
 
     /**
@@ -145,7 +110,8 @@ class Basket
      */
     protected function getProductRepository(): ProductRepository
     {
-        return new ProductRepository();
+        $productRepository = new ProductRepository();
+        return $productRepository2 = clone $productRepository;
     }
 
     /**

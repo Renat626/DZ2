@@ -8,6 +8,7 @@ use Model\Entity\Product;
 
 class ProductRepository
 {
+  public $productList;
     /**
      * Поиск продуктов по массиву id
      * @param int[] $ids
@@ -47,6 +48,11 @@ class ProductRepository
         }
 
         return $productList;
+    }
+
+    public function __clone()
+    {
+      $this->productList = clone $this->productList;
     }
 
     /**

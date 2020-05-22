@@ -43,6 +43,7 @@ class ProductService
      */
     protected function getProductRepository(): ProductRepository
     {
-        return new ProductRepository();
+      $productRepository = new ProductRepository();
+      return $productRepository2 = clone $productRepository;
     }
 }
